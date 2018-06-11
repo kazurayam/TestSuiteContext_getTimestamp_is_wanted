@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+   <description></description>
+   <name>TestSuiteContext_getTimestamp_is_wanted</name>
+   <tag></tag>
+   <UUID>74695822-5dd3-4dcd-9ca0-da18a8e09f93</UUID>
+   <migratedVersion>5.4.0</migratedVersion>
+   <pageLoadTimeout>0</pageLoadTimeout>
+</Project>
