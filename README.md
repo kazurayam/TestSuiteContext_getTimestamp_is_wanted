@@ -54,7 +54,7 @@ Here I got the timestamp from the current machine clock, and formatted the time 
 
 I felt comfortable enough with the screenshot file path: `./Results/TS1/20180611_140156/TC1/http%3A%2F%2Fdemoaut.katalon.com%2F.png`.
 
-If I repeatedly execute the Test Suite `TS1`, each TS1 execution will result in indivisual directory; differenciated by the timestamp value. I can preserve multiple versions of screenshot images. This means, I can compare the current screenshot with other versions in automated way. The following article describes how to implement it with Image Magick.
+If I repeatedly execute the Test Suite `TS1`, each TS1 execution will create an indivisual directory, differenciated by the timestamp value. I can preserve multiple versions of screenshot images. This means, I can compare the current screenshot with other versions in automated way. This idea makes me excited. The following article describes how to implement it with Image Magick.
 
  -  [Hotwrire Tech Blog: Image Comparison in Automated Testing ](http://techblog.hotwire.com/2016/05/19/image-comparison-in-automated-testing/)
 
