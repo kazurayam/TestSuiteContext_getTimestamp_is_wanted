@@ -52,7 +52,7 @@ In the above screenshot, you would find a directory named `Results/TS1/20180611_
 ```
 Here I got the timestamp from the current machine clock, and formatted the time value into a string of '20180611_140159'.
 
-I felt comfortable enough with the screenshot file path: `./Results/TS1/20180611_140156/TC1/http%3A%2F%2Fdemoaut.katalon.com%2F.png`.
+I felt comfortable enough with the screenshot file path: `./Results/TS1/20180611_140159/TC1/http%3A%2F%2Fdemoaut.katalon.com%2F.png`.
 
 If I repeatedly execute the Test Suite `TS1`, each TS1 execution will create an indivisual directory, differenciated by the timestamp value. I can preserve multiple versions of screenshot images. This means, I can compare the current screenshot with other versions in automated way. This idea makes me excited. The following article describes how to implement it with Image Magick.
 
@@ -62,24 +62,24 @@ If I repeatedly execute the Test Suite `TS1`, each TS1 execution will create an 
 
 Provided that the screenshots files are stored in a well organized way, I can integrate Image Magick with Katalon Studio. Then Katalon Studio would newly equip a feature of Visual Testing.
 
-## Problem found
+## A Problem found
 
-On the other hand you find in the above screenshot a diretory named `./Reports/TS1/20180611_140156`. This directory was created by Katalon Studio.
+On the other hand you find in the above screenshot a diretory named `./Reports/TS1/20180611_140156`. This directory was created by Katalon Studio. Compare the 2 timestamps:
 
+- `./Reports/TS1/20180611_140156`
+- `./Results/TS1/20180611_140159`
 
+Ah, this is disappointing. No reason why these two should have different timestamp. I want to refer to the test suite timestamp managed by Katalon Studio runtime so that I make my directory with the same time stamp value.
 
+## How to solve it
 
+I want the `com.kms.katalon.core.context.TestSuiteContext` class to be added with a new method `getTimestamp()` or `getTimestampAsString()`. I would propose the following code snippet:
 
+```
+class MyTestListener {
 
-
-
-
-Describe how these features can improve Katalon products (Katalon Studio, Katalon Analytics, Katalon Recorder), or how it optimize your automation process or why the current features need to be updated.
-
-Include diagram, UI or videos to demonstrate your requests is a plus.
-
-Impress us with your ideas. If you have the solution on how this can be implemented, feel free to let us know.
-
-This category is only for requesting features. DO NOT post any bugs or issues within this category
-
-Provide as much information as possible,  you will save us time to understand your suggestions, examples of your current situation/demand are preferred.  
+	@BeforeTestSuite
+	def beforeTestSuite(TestSuiteContext testSuiteContext) {
+        GlobalVariable.CURRENT_TESTSUITE_TIMESTAMP =
+            testSuiteContext.getTestSuiteTimestamp()   // I WANT THIS!
+```

@@ -27,9 +27,9 @@ class MyTestListener {
 		
 		// resolve the test suite timestamp.  e.g, '20180611_130937'
 		GlobalVariable.CURRENT_TESTSUITE_TIMESTAMP = 
-			DateTimeFormatter.ofPattern(DATE_TIME_PATTERN).format(LocalDateTime.now())
-		
-		// ************* the following code is much better IF POSSIBLE ************
+			DateTimeFormatter.ofPattern(DATE_TIME_PATTERN)
+			    .format(LocalDateTime.now())
+		// **** the following code is much better IF POSSIBLE ****
 		//GlobalVariable.CURRENT_TESTSUITE_TIMESTAMP = 
 		//    testSuiteContext.getTestSuiteTimestamp()
 
