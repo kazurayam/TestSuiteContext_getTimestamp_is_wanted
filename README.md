@@ -58,7 +58,9 @@ If I repeatedly execute the Test Suite `TS1`, each TS1 execution will create an 
 
  -  [Hotwrire Tech Blog: Image Comparison in Automated Testing ](http://techblog.hotwire.com/2016/05/19/image-comparison-in-automated-testing/)
 
-Provided that the screenshots files are well organized, I can integrate Image Magick with Katalon Studio. Then Katalon Studio would newly equip a feature of Visual Testing.
+## What this means
+
+Provided that the screenshots files are stored in a well organized way, I can integrate Image Magick with Katalon Studio. Then Katalon Studio would newly equip a feature of Visual Testing.
 
 ## Problem found
 
