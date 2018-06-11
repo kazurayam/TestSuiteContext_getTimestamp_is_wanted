@@ -35,7 +35,7 @@ I have implemented this approach with custom Groovy programing in TestListener, 
 - in the project directory, you will find `Results` directory is created inside which you find a PNG file is stored.
 
 then I got the following results:
-![エビフライトライアングル](http://i.imgur.com/Jjwsc.jpg "Results")
+![Results directory and screenshot files](https://github.com/kazurayam/TestSuiteContext_getTimestamp_is_wanted/blob/master/docs/screenshot_saved_in_the_Results_dir.png "Results")
 
 
 
