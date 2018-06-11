@@ -1,2 +1,2 @@
-TestSuiteContext#getTimestamp is wanted
-=======================================
+TestSuiteContext#getTimestamp() is wanted
+=========================================
