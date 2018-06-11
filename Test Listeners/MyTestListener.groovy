@@ -29,9 +29,9 @@ class MyTestListener {
 		GlobalVariable.CURRENT_TESTSUITE_TIMESTAMP = 
 			DateTimeFormatter.ofPattern(DATE_TIME_PATTERN).format(LocalDateTime.now())
 		
-		// ********* the following is much better if possible ************
+		// ************* the following code is much better IF POSSIBLE ************
 		//GlobalVariable.CURRENT_TESTSUITE_TIMESTAMP = 
-		//    testSuiteContext.getTestSuiteTimestampAsString()
+		//    testSuiteContext.getTestSuiteTimestamp()
 
 	}
 
