@@ -34,8 +34,9 @@ I have implemented this approach with custom Groovy programing in TestListener, 
 - clone this project onto your PC
 - open this project with Katalon studio
 - load the test suite 'TS1'
-- execuite the test suite
-- in the project directory, you will find `Results` directory is created inside which you find a PNG file is stored.
+- execute the test suite with any browser you like
+- in the project directory, you will find the `Results` directory is newly created.
+- in the `Results` directory you find a PNG file.
 
 then I got the Results directory and screenshot file as follows:
 ![Results directory and screenshot files](https://github.com/kazurayam/TestSuiteContext_getTimestamp_is_wanted/blob/master/docs/screenshot_saved_in_the_Results_dir.png "Results")
@@ -51,12 +52,13 @@ In the above screenshot, you would find a directory named `Results/TS1/20180611_
 ```
 Here I got the timestamp from the current machine clock, and formatted the time value into a string of '20180611_140159'.
 
-I feel comfortable with the screenshot file path: `./Results/TS1/20180611_140156/TC1/http%3A%2F%2Fdemoaut.katalon.com%2F.png`.
+I felt comfortable enough with the screenshot file path: `./Results/TS1/20180611_140156/TC1/http%3A%2F%2Fdemoaut.katalon.com%2F.png`.
 
-If I repeatedly execute the Test Suite `TS1`, each TS1 execution will result in indivisual directory; differenciated by the timestamp value. I can preserve multiple versions of screenshot images. This means, I can compare the current screenshot with other previous versions in automated way. The following article describes how to implement it with Image Magick.
+If I repeatedly execute the Test Suite `TS1`, each TS1 execution will result in indivisual directory; differenciated by the timestamp value. I can preserve multiple versions of screenshot images. This means, I can compare the current screenshot with other versions in automated way. The following article describes how to implement it with Image Magick.
 
--  [Hotwrire Tech Blog: Image Comparison in Automated Testing ](http://techblog.hotwire.com/2016/05/19/image-comparison-in-automated-testing/)
+ -  [Hotwrire Tech Blog: Image Comparison in Automated Testing ](http://techblog.hotwire.com/2016/05/19/image-comparison-in-automated-testing/)
 
+Provided that the screenshots files are well organized, I can integrate Image Magick with Katalon Studio. Then Katalon Studio would newly equip a feature of Visual Testing.
 
 ## Problem found
 
